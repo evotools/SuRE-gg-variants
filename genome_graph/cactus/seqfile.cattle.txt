@@ -1,0 +1,5 @@
+ARS_UCD2_Tann	/exports/cmvm/eddie/eb/groups/prendergast_roslin/Lindsey/data/pangenomes/cattle-Tann-pg/cattle_genomes/ARS_UCD_v2.0_Tann.fa.gz
+Bi_83_A.1	/exports/cmvm/eddie/eb/groups/prendergast_roslin/Lindsey/data/pangenomes/cattle-Tann-pg/cattle_genomes/Bi_TaA_trim.asm.bp.hap1.p_ctg.fa.gz
+Bi_83_A.2	/exports/cmvm/eddie/eb/groups/prendergast_roslin/Lindsey/data/pangenomes/cattle-Tann-pg/cattle_genomes/Bi_TaA_trim.asm.bp.hap2.p_ctg.fa.gz
+BOAEC_D1.1	/exports/cmvm/eddie/eb/groups/prendergast_roslin/Lindsey/data/pangenomes/cattle-Tann-pg/cattle_genomes/BOAEC-D1-REP_trim.asm.bp.hap1.p_ctg.fa.gz
+BOAEC_D1.2	/exports/cmvm/eddie/eb/groups/prendergast_roslin/Lindsey/data/pangenomes/cattle-Tann-pg/cattle_genomes/BOAEC-D1-REP_trim.asm.bp.hap2.p_ctg.fa.gz

@@ -1,0 +1,3 @@
+CHM13	/exports/cmvm/eddie/eb/groups/prendergast_roslin/Lindsey/data/pangenomes/human-pg/human_haps/hs1.fa.gz
+NA12878.1	/exports/cmvm/eddie/eb/groups/prendergast_roslin/Lindsey/data/pangenomes/human-pg/human_haps/NA12878-denovo-H1.fa.gz
+NA12878.2	/exports/cmvm/eddie/eb/groups/prendergast_roslin/Lindsey/data/pangenomes/human-pg/human_haps/NA12878-denovo-H2.fa.gz

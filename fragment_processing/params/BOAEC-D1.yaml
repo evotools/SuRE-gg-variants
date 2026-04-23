@@ -1,0 +1,28 @@
+# Information on the run
+libID:  'BOAEC-D1'
+refName:  'cattle-Tann-pg'
+
+# Paths to inputs and outputs
+resDir: "results/BOAEC-D1"
+storeDir: "/exports/cmvm/eddie/eb/groups/prendergast_roslin/Lindsey/data/Nextflow_results/BOAEC-D1"
+vgPath: '/exports/cmvm/eddie/eb/groups/prendergast_roslin/Lindsey/programs/vg/vg'
+iPCRDir: '/exports/cmvm/eddie/eb/groups/prendergast_roslin/Lindsey/data/fastq/iPCR/BOAEC-D1/' # might need to change to scratch
+genomePath: '/exports/cmvm/eddie/eb/groups/prendergast_roslin/Lindsey/data/pangenomes/cattle-Tann-pg/cattle-Tann-pg'
+walksDir: '/exports/cmvm/eddie/eb/groups/prendergast_roslin/Lindsey/data/pangenomes/cattle-Tann-pg/walks/BOAEC_D1/'
+subgraphsPath:  '/exports/cmvm/eddie/eb/groups/prendergast_roslin/Lindsey/data/pangenomes/cattle-Tann-pg/chr_subgraphs/'
+cDNAList: '/exports/eddie/scratch/lplender/SuRE/pipeline/SuRE_SV/data/cDNA_list.csv' # check and change, might need no_count version
+varsDir: '/exports/cmvm/eddie/eb/groups/prendergast_roslin/Lindsey/data/pangenomes/cattle-Tann-pg/variants/biallelic_bychr'
+multiDir: '/exports/cmvm/eddie/eb/groups/prendergast_roslin/Lindsey/data/pangenomes/cattle-Tann-pg/variants/multi_bychr'
+
+# Run parameters
+splitReads: 3
+fragBatchSize: 500000
+countTableSort: ''
+chrList: "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 X"
+gtnumber: 1
+
+# Options to run/not run particular steps of the pipeline (set true/false). If false, use an existing result from the step from storeDir
+giraffeOnly: false
+doiPCRAln: false        # Align trimmed reads to genome
+doiPCRTrim: false       # Do cutadapt to trim raw fastq (only done if doiPCRAln is true)
+doCountTable: false     # Merge iPCR alignments and cDNA counts to get a counts table

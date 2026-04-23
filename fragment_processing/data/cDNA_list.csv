@@ -1,0 +1,5 @@
+ExpID,cDNADir,ifCount
+BOAEC_D1,/exports/cmvm/eddie/eb/groups/prendergast_roslin/Lindsey/data/fastq/cDNA/transfected_into_BOAEC-D1,true
+BOAEC_D2,/exports/cmvm/eddie/eb/groups/prendergast_roslin/Lindsey/data/fastq/cDNA/transfected_into_BOAEC-D2,true
+HAEC_D1_2,/exports/cmvm/eddie/eb/groups/prendergast_roslin/Lindsey/data/fastq/cDNA/transfected_into_HAEC-D1_rep2,true
+HAEC_D1_3,/exports/cmvm/eddie/eb/groups/prendergast_roslin/Lindsey/data/fastq/cDNA/transfected_into_HAEC-D1_rep3,true

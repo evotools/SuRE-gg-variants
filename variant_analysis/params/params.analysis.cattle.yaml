@@ -1,0 +1,26 @@
+r_conf: "/exports/eddie/scratch/lplender/SuRE/SuRE_SV/analysis/analysis_nextflow/data/config.cattle_mamm.eddie.R"
+analysis_name: "cattle_mammary"
+resdir: "results"
+chrList: "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29"
+outBatchStats: "int_stats"
+speciesList: "Cow" # species of transfected cell to test; should match the prefixes used in reps_rename in the R config file, plus 'all' if required
+mmap_path: "/home/lplender/scratch/SuRE/barcode_check/*.dup_bc.tsv" # List of barcodes that map to >1 chromosome/library (duplicates/multi-mappers)
+
+# Path to the vcf file from cactus, and an alternative set of column headers (same order as the vcf)
+# as these had slightly different IDs in my analysis
+vcfPath: "/exports/cmvm/eddie/eb/groups/prendergast_roslin/Lindsey/data/pangenomes/cattle-Tann-pg/cattle-Tann-pg.vcf.gz"
+libHeaders: "BOAEC-D1\tBi-83-A"     # leave as "" to use the vcf headers
+
+# For model testing the script will run in parallel, and if the number of jobs is an issue
+# then can increase the number of cpus per job and decrease the number of chunks (in the R config file)
+modelCores: 2
+
+# lists of directories (can vary in length)
+# Library sizes for normalisation
+libsize_paths:
+ - /home/lplender/scratch/SuRE/Nextflow_results/Bi-83-A/cattle-Tann-pg/lib_sizes/*.lib_counts.txt
+ - /home/lplender/scratch/SuRE/Nextflow_results/BOAEC-D1/cattle-Tann-pg/lib_sizes/*.lib_counts.txt
+# Var counts tables for data
+vartable_paths:
+ - /home/lplender/scratch/SuRE/Nextflow_results/Bi-83-A/cattle-Tann-pg/var_counts_tables/*var_counts_table.txt.gz
+ - /home/lplender/scratch/SuRE/Nextflow_results/BOAEC-D1/cattle-Tann-pg/var_counts_tables/*var_counts_table.txt.gz

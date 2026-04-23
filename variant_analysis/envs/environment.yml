@@ -1,0 +1,16 @@
+name: r_env
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - bcftools=1.22
+  - r-base=4.4
+  - r-tidyverse
+  - r-data.table
+  - r-pscl
+  - r-nplyr
+  - r-furrr
+  - r-e1071
+  - r-purrr
+  - r-lmtest

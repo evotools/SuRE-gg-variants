@@ -1,0 +1,28 @@
+# Information on the run
+libID:          # ID for SuRE library (BOAEC-D1 etc)
+refName:        # ID of graph genome used as reference
+
+# Paths to inputs and outputs
+resDir:         # subdirectory within SuRE_SV directory where Nextflow should publish results
+storeDir:       # to allow for storage of results following the same structure but in a different location
+vgPath:         # Use this binary of vg
+iPCRDir:        # directory containing fastq of iPCR sequencing runs (only one library)
+genomePath:     # full path prefix for graph genome files from cactus (add .gbz, .min etc)
+walksDir:      # full path to directory with walks from both haplotypes of this sample (named just with chrID.txt)
+subgraphsPath:  # Directory containing chromosome subgraphs needed for splitting up gam files; use all .vg files in this directory
+cDNAList:       # file with ID of cDNA experiment, directory for fastq files, whether it needs counting or not
+varsDir:        # Path to directory with files containing parse biallelic variants -- expect one file per chr
+multiDir:       # Path to directory with files containing parsed multiallelic variants, one per chr
+
+# Run parameters
+splitReads:         # Whether to split the iPCR sequencing reads into batches (either number of batches or 'false')
+fragBatchSize:      # How many fragments to process in one batch for variant finding
+countTableSort:     # Expression to use for sorting the counts table in AGG_COUNTS if not using the defaults. Usually set as ''
+chrList:            # Space separated list of IDs of chromosomes to include in the variant analysis
+gtnumber:           # Which genotype is this library in the variants files? i.e. (check) BOAEC-D1 is 1, Bi-83-A is 2, hum is 1 (as different variants file)
+
+# Options to run/not run particular steps of the pipeline (set true/false). If false, use an existing result from the step from storeDir
+giraffeOnly: false      # If true, stop after trimming and aligning reads
+doiPCRAln: false        # Align trimmed reads to genome
+doiPCRTrim: false       # Do cutadapt to trim raw fastq (only done if doiPCRAln is true)
+doCountTable: false     # Merge iPCR alignments and cDNA counts to get a counts table
