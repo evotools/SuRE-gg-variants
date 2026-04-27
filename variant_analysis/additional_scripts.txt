@@ -1,0 +1,25 @@
+Additional scripts supporting analyses and figures in the paper. Given for reference and adaptation rather than ready-to-run since most have run-specific paths and filenames etc.
+
+run_check_barcodes.both.sh
+Find multi-mapping barcodes across multiple libraries
+
+annotate_vars.final.R
+Filter variants from the pipeline for skew and model failures, and add annotations such as distance to TSS
+
+distinct_effects.R
+Code to look for pairs of nearby variants with evidence for independent effects. Run interactively as it has an externally called command (to bcftools) mid-script.
+
+submit_projectref.sh, project_to_ref.sh
+Pair of scripts (by-chromosome submission+data prep, actual fragment processing) to take a list of barcodes of fragments aligned in the graph genome and identify as closely as possible where they start and end in the reference genome. Barcodes can be extracted for each significant variant from 
+
+submit_projectref.multi.sh
+Equivalent for non-biallelic variants
+
+submit_fragpath.sh, find_frag_path.pl
+Pair of scripts (by-chromosome submission+data prep, actual fragment processing) to take a list of barcodes fragments aligned in the graph genome and find the full path of the fragment, assuming it follows that of one of the haplotypes in the graph. If read paths don't match any haplotypes exactly then the fragment is skipped.
+
+figures_varplots.R
+Code to produce the fragment plots in Figures 2b, 3e, 5c and 6d, using fragment locations from project_to_ref.sh.
+
+figure_nodeplot.R
+Code to produce the node-based fragment plot in Figure 3b, using fragment paths from find_frag_path.pl.
