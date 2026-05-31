@@ -1,20 +1,5 @@
+# Specific for the data in the SuRE paper
 #### Get data for graph genomes and align using cactus ####
-
-### Human
-## Download reference genome and haplotype-resolved assembly for NA12878
-wget https://hgdownload.soe.ucsc.edu/goldenPath/hs1/bigZips/hs1.fa.gz
-wget ftp://ftp.dfci.harvard.edu/pub/hli/whdenovo/asm/NA12878-denovo*
-
-## Make seqfile.hum.txt according to 
-# https://github.com/ComparativeGenomicsToolkit/cactus/blob/master/doc/pangenome.md#interface
-# Contents of file looks like:
-CHM13	/exports/eddie/scratch/lplender/data/human_haps/hs1.fa.gz
-NA12878.1	/exports/eddie/scratch/lplender/SuRE/data/human_haps/NA12878-denovo-H1.fa.gz
-NA12878.2	/exports/eddie/scratch/lplender/SuRE/data/human_haps/NA12878-denovo-H2.fa.gz
-
-## Submit job to run minigraph-cactus on eddie
-qsub -pe sharedmem 16 -R y <path-to-SuRE_SV>/pangenome/cactus/run_cactus.human_pg.sh
-
 
 ### Cattle
 ## Download reference genome ARS-UCD2.0 with chromosomes named with numbers from BovLRC
@@ -34,7 +19,8 @@ zcat ${i}_trim.asm.bp.hap${j}.p_ctg.gfa.gz | awk '/^S/{print ">"$2;print $3}' | 
 done
 done
 
-## Make seqfile.cattle.txt
+## Make seqfile.cattle.txt according to 
+# https://github.com/ComparativeGenomicsToolkit/cactus/blob/master/doc/pangenome.md#interface
 # Sample names cannot contain . so just use ARS_UCD2_Tann as the reference name
 # Bi_TaA is Bos indicus (Sahiwal), BOAEC is Bos taurus (Holstein-Friesan)
 # Sample names (in seqfile are followed by paths):

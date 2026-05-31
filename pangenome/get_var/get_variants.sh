@@ -2,7 +2,7 @@
 
 # get_variants.sh
 
-VGPATH="/exports/cmvm/eddie/eb/groups/prendergast_roslin/Lindsey/programs/vg/vg"
+VGPATH="vg"
 
 OPTSTRING="s:n:v:o:k:g:p:"
 while getopts ${OPTSTRING} opt; do
@@ -24,6 +24,9 @@ while getopts ${OPTSTRING} opt; do
 		;;
 	p)
 		SCRIPTDIR=${OPTARG}	# path to directory with run scripts in
+		;;
+	g)
+		VGPATH=${OPTARG}	# path to vg binary (or 'vg' if in PATH)
 		;;
 	?)
 		echo "Invalid option: -${OPTARG}"

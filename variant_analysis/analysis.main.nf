@@ -134,7 +134,7 @@ workflow	{
 	NORMSCORES_MULTI(PREP_DATA_MULTI.out.multi_chunks, NORMT.out, params.r_conf)
 	
 	// Extract some extra details from the vcf
-	GET_ALLELES(params.vcfPath)
+	GET_ALLELES(Channel.fromPath(params.vcfPath))
 
 	// Get details of the alleles that were actually compared in the variants that were annotated as multiallelic
 	// but contained only two alleles

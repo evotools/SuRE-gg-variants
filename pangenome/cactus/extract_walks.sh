@@ -5,9 +5,8 @@
 # Extract chromosome subgraphs from the all-refs pangenome
 # From these, extract all walks for each subgraph, then get them for each sample and put in sample subdirectory
 
-VGPATH="/exports/cmvm/eddie/eb/groups/prendergast_roslin/Lindsey/programs/vg/vg"
-
-OPTSTRING="n:k:r:o:"
+VGPATH="vg"
+OPTSTRING="n:k:r:o:v:"
 while getopts ${OPTSTRING} opt; do
 	case $opt in
 	n)
@@ -21,6 +20,9 @@ while getopts ${OPTSTRING} opt; do
 		;;
 	o)
 		OUTPUT=${OPTARG}	# directory used for cactus_pangenome.sh output
+		;;
+	v)
+		VGPATH=${OPTARG}	# path to vg binary (or 'vg' if in PATH)
 		;;
 	?)
 		echo "Invalid option: -${OPTARG}"
