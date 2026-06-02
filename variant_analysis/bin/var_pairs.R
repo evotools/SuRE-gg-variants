@@ -68,7 +68,7 @@ pvals <- rbind(snp.signif, other.signif)
 rm(other)
 
 # Load subset of chunks file containing only significant variants
-sig_frags_long <- fread(paste0(chrid, ".all_cattle.signif_frag_chunks.txt.gz"))
+sig_frags_long <- fread(paste0(chrid, ".", out_pref, ".signif_frag_chunks.txt.gz"))
 sig_frags_long <- sig_frags_long[cellSpecies == spec]
 sig_frags_long <- sig_frags_long[pvals[, .(VarID)], on = "VarID"]
 

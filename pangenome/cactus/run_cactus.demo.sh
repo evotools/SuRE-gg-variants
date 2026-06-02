@@ -11,9 +11,10 @@
 # # Initialise the environment modules
 # . /etc/profile.d/modules.sh
 
+SKIPCAC=""
+
 MAINDIR=$1		# relative path to main github dir
 SKIPCAC=$2	# if given then skip the cactus step and use the graph files in cattle-Tann-pg
-
 
 
 # If not using the supplied graph, edit for your setup so that cactus-pangenome is in $PATH
@@ -34,7 +35,7 @@ var_outname="var_cattle"	# prefix for variants files
 
 
 # Run cactus specifying the chromosomes including X and Y and keeping other contigs
-${MAINDIR}/pangenome/cactus/cactus_pangenome.demo.sh -s "$seqfile" -o "$outname" -r "$ref" -a "$allsam" -c "$contigline" -v "$vgpath" -k $SKIPCAC 2> cactus_out.txt
+${MAINDIR}/pangenome/cactus/cactus_pangenome.demo.sh -s "$seqfile" -o "$outname" -r "$ref" -a "$allsam" -c "$contigline" -v "$vgpath" -k "$SKIPCAC" 2> cactus_out.txt
  
 ${MAINDIR}/pangenome/cactus/extract_walks.sh -n "$nonref" -k "$chrlist" -r "$ref" -o "$outname"
 
