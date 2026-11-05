@@ -1,18 +1,11 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
-
 # Take the counts tables annotated with variant details (concatenating multiple batches if given), sort by chromosome and first node, and split to get one line per variant (skipping fragments with no variants)
 # Sorting will not be perfect but just to get an approximate order along the ref in case of batching muddling things up
 
 # Output reorders and renames columns slightly to be consistent with previous outputs of the pipeline
 # Chr	Barcode	Start	End	First_node	Strand	MAPQs	Haplotype	VarID	VarAllele	VarPos	VarType	VarCav	iPCR	SuRE_replicate1	SuRE_replicate2...
 
-
-
-# use local tmpdir in case node runs out of space
-mkdir ${PWD}/tmp
-export TMPDIR=${PWD}/tmp
 
 GAWK=gawk
 
@@ -56,11 +49,6 @@ FNR == 1 {
 	if ($COLVID != "NA")	{
 		print $0 | "sort -k2,2 -k5,5"
 	}
-}
-END {
-    st = close("sort -k2,2 -k5,5", "to")
-    if (st != 0)
-        exit st
 }
 ' ${LISTFILES} | \
 

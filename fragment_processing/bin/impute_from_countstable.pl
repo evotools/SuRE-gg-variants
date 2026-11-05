@@ -103,7 +103,7 @@ while (<V>)	{
 		}
 	}
 	elsif ($ar[3] eq 'uneqsub')	{
-		my @nodes = split (/[\,<>]/, $ar[5]);
+		my @nodes = split (/[\,<>]/, $ar[3]);
 		if ($gt[0] eq $gt[1])	{
 			foreach my $node (@nodes)	{
 				next unless ($node);
