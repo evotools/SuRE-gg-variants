@@ -23,3 +23,7 @@ Code to produce the fragment plots in Figures 2b, 3e, 5c and 6d, using fragment 
 
 figure_nodeplot.R
 Code to produce the node-based fragment plot in Figure 3b, using fragment paths from find_frag_path.pl.
+
+prep_mammMPRA_data.R
+mammMPRA_models.strand.R
+Process data from targeted MRPA in bovine mammary cells. Reformat the data files from Annogen to a similar format to SuRE pipeline model files. Then run the negative binomial model.
