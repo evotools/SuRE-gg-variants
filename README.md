@@ -7,6 +7,7 @@ The repository has three main subdirectories:
 - _pangenome_ contains code and instructions to generate the genome graph ('cactus') and extract variant lists ('get_var').
 - _fragment\_processing_ contains a workflow to process one SuRE library to a table of fragment locations, transcript counts and associated variants. Its main inputs are the raw SuRE sequencing files for iPCR and cDNA, and the variant lists from the genome graph.
 - _variant\_analysis_ contains a workflow to take tables from multiple SuRE libraries, combine them and test for allele-specific expression. Its subdirectory 'extra_code' contains some stand-alone scripts and code for additional processing of the results, e.g. filtering outputs and preparing plots. These include a script to produce by-chromosome lists of barcodes that map to multiple locations or appear in more than one library, which are used to exclude them by scripts in the pipeline.
+- _emVar_browser_ contains an IGV session file that will load data files from the Zenodo repository to create a browsable set of variants and their SuRE results, and a readme with details of the tracks.
 
 
 ## Setup
